@@ -27,6 +27,7 @@
         var tamannoBola = 40; //Tamaño de la bola para detectar las colisiones
         var velocidadArmario = 2;
         var nivel = 1;
+        var clickPulsado = false;
         var espacioPulsado = false;
         var alturaDisponible;
         var distanciaEntreArmarios = 160;
@@ -64,6 +65,17 @@
                 }
             }
         }
+
+        canvas.addEventListener("click", pulsarClick, false);
+        function pulsarClick(e) {
+            //if (e.keyCode == 65) {
+                clickPulsado = true;
+                if (finDelJuego) {
+                    document.location.reload();
+                }
+            //}
+        }
+
 
         /**
          * Pintar bola
@@ -204,7 +216,7 @@
             //let impacto = false;
 
             //Hay que saber cuando se ha pulsado el espacio para subir la bola
-            if (espacioPulsado) {
+            if (espacioPulsado || clickPulsado) {
                 if (y > 0) {
                     if (y < 100 && y > 0) {
                         y = 60 - y;
@@ -212,6 +224,7 @@
                         y -= 60;
                     }
                     espacioPulsado = false;
+                    clickPulsado = false;
                 }
             } else if (y + dy > canvas.height - tamannoBola || impacto) { //Fin del juego si la bola toca el borde inferior
                 ctx.font = "70px Times";
