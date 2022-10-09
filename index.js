@@ -67,7 +67,9 @@ function drawBall() {
     ctx.beginPath();
     //ctx.arc(x, y, tamannoBola, 0, Math.PI * 2);
     //ctx.fillStyle = "#0095DD";
-    ctx.drawImage(imgBola, x, y, tamannoBola, tamannoBola);
+    imgBola.onload = function() {
+        ctx.drawImage(imgBola, x, y, tamannoBola, tamannoBola);
+    }        
     ctx.closePath();
 }
 
@@ -80,14 +82,18 @@ function drawDrawers() {
 
     ctx.beginPath();
     //ctx.fillStyle = "#00FF00";
-    //ctx.fillRect(armarioInferior.xArmario -= 2, armarioInferior.yArmario, armarioInferior.anchura, armarioInferior.altura);            
-    ctx.drawImage(imgArmario, armarioInferior.xArmario -= velocidadArmario, armarioInferior.yArmario, armarioInferior.anchura, armarioInferior.altura);
+    //ctx.fillRect(armarioInferior.xArmario -= 2, armarioInferior.yArmario, armarioInferior.anchura, armarioInferior.altura);
+    imgBola.onload = function() {
+        ctx.drawImage(imgArmario, armarioInferior.xArmario -= velocidadArmario, armarioInferior.yArmario, armarioInferior.anchura, armarioInferior.altura);
+    }
     ctx.closePath();
 
     ctx.beginPath();
     //ctx.fillStyle = "#00FF00";
     //ctx.fillRect(armarioSuperior[0] -= 2, armarioSuperior[1], armarioSuperior[2], armarioSuperior[3]);
-    ctx.drawImage(imgArmarioI, armarioSuperior[0] -= velocidadArmario, armarioSuperior[1], armarioSuperior[2], armarioSuperior[3]);
+    imgBola.onload = function() {
+        ctx.drawImage(imgArmarioI, armarioSuperior[0] -= velocidadArmario, armarioSuperior[1], armarioSuperior[2], armarioSuperior[3]);
+    }
     ctx.closePath();
 }
 
