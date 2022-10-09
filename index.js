@@ -33,10 +33,10 @@ musicaAmbiente.loop = true;
 const perder = new Audio('/sound/Perder.mp3');
 const subirNivel = new Audio('/sound/SubirNivel.mp3');
 
-var trascurso = setInterval(draw, 10);
 let finDelJuego = false;
-
 draw(); //Comenzar el juego pintando todos los elementos
+var trascurso = setInterval(draw, 10);
+
 
 //Recoger el evento de cuando se pulsa el espacio
 document.addEventListener("keyup", pulsarEspacio, false);
