@@ -94,7 +94,9 @@ function drawDrawers() {
 function drawBackground() {
     ctx.beginPath();
     //ctx.fillStyle = "#0095DD";
-    ctx.drawImage(imgBosque, 0, 0, canvas.width, canvas.height);
+    imgBosque.onload = function() {
+        ctx.drawImage(imgBosque, 0, 0, canvas.width, canvas.height);
+    }
     ctx.closePath();
 }
 
