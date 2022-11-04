@@ -27,11 +27,11 @@ imgBola.src = "/images/Sol.png";
 var imgBosque = new Image();
 imgBosque.src = "/images/Bosque.jpg";
 //Audio
-const musicaAmbiente = new Audio('/sound/Ambiente.mp3');
-musicaAmbiente.play();
-musicaAmbiente.loop = true;
-const perder = new Audio('/sound/Perder.mp3');
-const subirNivel = new Audio('/sound/SubirNivel.mp3');
+// const musicaAmbiente = new Audio('/sound/Ambiente.mp3');
+// musicaAmbiente.play();
+// musicaAmbiente.loop = true;
+// const perder = new Audio('/sound/Perder.mp3');
+// const subirNivel = new Audio('/sound/SubirNivel.mp3');
 
 let finDelJuego = false;
 draw(); //Comenzar el juego pintando todos los elementos
@@ -152,7 +152,7 @@ function comprobarPunto() {
             ctx.font = "35px Times";
             ctx.fillStyle = "lightgreen";
             ctx.fillText("Más rápido!", 240, 200);
-            subirNivel.play();
+            // subirNivel.play();
             break;
 
         case 10:
@@ -161,7 +161,7 @@ function comprobarPunto() {
             ctx.font = "35px Times";
             ctx.fillStyle = "lightgreen";
             ctx.fillText("Menos espacio!", 240, 200);
-            subirNivel.play();
+            // subirNivel.play();
             break;
 
         case 15:
@@ -170,7 +170,7 @@ function comprobarPunto() {
             ctx.font = "35px Times";
             ctx.fillStyle = "lightgreen";
             ctx.fillText("Aún más rápido!", 200, 200);
-            subirNivel.play();
+            // subirNivel.play();
             break;
 
         case 20:
@@ -179,7 +179,7 @@ function comprobarPunto() {
             ctx.font = "35px Times";
             ctx.fillStyle = "lightgreen";
             ctx.fillText("Mucho menos espacio!", 150, 200);
-            subirNivel.play();
+            // subirNivel.play();
             break;
         default:
             break;
@@ -215,7 +215,7 @@ function draw() {
         ctx.fillText("¡Has perdido!", 110, 220);
         finDelJuego = true;
         clearInterval(trascurso);
-        perder.play();
+        // perder.play();
     }
     y += dy;
 }
