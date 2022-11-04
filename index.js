@@ -19,13 +19,13 @@ var armarioSuperior = Armario.generarArmarioSuperior(armarioInferior);
 var nuevoArmario = true; //Variable booleana que servirá para controlar la puntuación
 //Imágenes
 var imgArmario = new Image();
-imgArmario.src = "/images/Armario.jpg";
+imgArmario.src = "Armario.jpg";
 var imgArmarioI = new Image();
-imgArmarioI.src = "/images/Armario'.jpg";
+imgArmarioI.src = "Armario'.jpg";
 var imgBola = new Image();
-imgBola.src = "/images/Sol.png";
+imgBola.src = "Sol.png";
 var imgBosque = new Image();
-imgBosque.src = "/images/Bosque.jpg";
+imgBosque.src = "Bosque.jpg";
 //Audio
 // const musicaAmbiente = new Audio('/sound/Ambiente.mp3');
 // musicaAmbiente.play();
